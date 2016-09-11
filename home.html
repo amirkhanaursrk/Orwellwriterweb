@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Orwell Writer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="./dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.languagetool.org/js/jquery-1.7.0.min.js"></script>
+    <script type="text/javascript" src="https://www.languagetool.org/online-check/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript" src="https://www.languagetool.org/online-check/tiny_mce/plugins/atd-tinymce/editor_plugin2.js"></script>
+
+    <link href="./dist/css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./dist/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/css/style5.css" />
+    <script src="./distjs/modernizr.custom.js"></script>
+    <style>
+        @media print {
+            #rem {
+                visibility: hidden;
+            }
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<body style="overflow: hidden">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <b class="navbar-brand" href="#">Orwell Writer</b>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Export <b class="caret"></b></a>
+                    <span class="dropdown-arrow"></span>
+                    <ul class="dropdown-menu">
+                        <li onclick="download('file.txt', tinyMCE.activeEditor.getContent({ format: 'text' }));"><a>Save as</a></li>
+                        <li class="divider"></li>
+                        <li onclick="window.print();"><a href="#">Print (Alpha)</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="active" onClick="doit();return false;"><a>Grammar</a></li>
+                <li>
+                    <a id="return-search"></a>
+                </li>
+            </ul>
+            <div class="navbar-form navbar-right">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" id="navbarInput-01" type="search" placeholder="Search Rel Topics" style="
+    
+    padding-bottom: 00px;
+    padding-top: 00px;
+    border-top-width: 00px;
+    border-bottom-width: 00px;
+">
+                        <span class="input-group-btn">
+            <button type="submit" class="btn" onclick="search();"><span class="fui-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    <div>
+                        <textarea style="border: none; outline: none;" id="MyText" rows=35% cols=75% onkeyup="create(event);" placeholder="Write Here...">Welcome to the Orwell Writer. Fullscreen for more. You can type here. </textarea>
+                    </div>
+                </p>
+            </div>
+            <div id="rem" class="col-md-6">
+                <h2>
+				Adjectives
+			</h2>
+                <div style="font-family: 'Roboto', sans-serif; font-size: 18px; font-style: medium;" id="divID1">
+                </div>
+
+                <h2>
+				Synonyms
+			</h2>
+                <div style="font-family: 'Roboto', sans-serif; font-size: 18px; font-style: medium;" id="divID">
+                </div>
+                <h2>
+				Predecessors
+			</h2>
+                <div style="font-family: 'Roboto', sans-serif; font-size: 18px; font-style: medium;" id="divID3">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <form name="checkform" action="http://community.languagetool.org" method="post">
+
+        <div>
+            <input style="display: none;" type="submit" name="_action_checkText" value="Check Text">
+            <div id="feedbackErrorMessage" style="color: red;"></div>
+        </div>
+
+    </form>
+    <nav id="bt-menu" class="bt-menu">
+        <a href="#" style="border: none; outline: none;" class="bt-menu-trigger"></a>
+        <ul>
+            <li><p style="color: white;">Orwell Writer is a text writing app that was </p></li>
+           
+        </ul>
+        <ul>
+            
+            <li><a href="https://www.youtube.com/channel/UCGF5B0_g2_aJh0BswKcbYMg" class="bt-icon icon-star">Youtube</a></li>
+            <li><a href="mailto:kookygavinquack@gmail.com" class="bt-icon icon-email">Email</a></li>
+            <li><a href="https://github.com/amirkhanaursrk/Orwellwriter" class="bt-icon icon-github">Github</a></li>
+        </ul>
+    </nav>
+    <script src="./dist/js/vendor/jquery.min.js"></script>
+    <script src="./dist/js/flat-ui.min.js"></script>
+    <script src="./dist/js/classie.js"></script>
+    <script src="./dist/js/borderMenu.js"></script>
+</body>
+
+</html>
